@@ -342,16 +342,13 @@ main {
     line-height: 10vh;
 }
 .name_bar h1 {
-    font-size: 6vh;
+    font-size: 9vw;
     font-weight: 400;
-    margin: 0 6vw;
     height: 100%;
 }
 .name_bar p {
-    font-size: 2.2vh;
+    font-size: 3.6vw;
     font-weight: 300;
-    float: left;
-    width: 34%;
 }
 .playmatch_middle {
     width: 45vh;
@@ -420,7 +417,7 @@ main {
     overflow: hidden;
 }
 .compatibility {
-    width: 75%;
+    width: 80%;
     height: 13vh;
     background: var(--default-black);
     border-radius: 110px;
@@ -438,13 +435,13 @@ main {
     color: white;
     font-weight: 300;
     left: 7%;
-    position:absolute;
-    line-height: calc(4.5vh - 2vw);
-    font-size: calc(5.5vw - 0.9vh);
+    position: absolute;
+    line-height: calc(5vh - 2vw);
+    font-size: calc(6vw - 1vh);
 }
 .level_container {
     width: 9vh;
-    right: 2%;
+    right: 4%;
     position: absolute;
 }
 .compat_level {
@@ -602,26 +599,26 @@ main {
 
 .see_more{
     position: absolute;
-    width: 8vh;
-    height: 8vh;
-    bottom: 18%;
+    width: 10vw;
+    height: 9vh;
+    bottom: 16%;
     right: 0;
     left: 0;
     background: #111;
     margin: 0 auto;
     z-index: 10;
-    border-radius: 1000px;
+    border-radius: 300px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     background-image: url(assets/fingerprint.svg);
     background-repeat: no-repeat;
     background-size: 120%;
     background-position: 55% 23%;
     cursor: pointer;
-    box-shadow: 0 5px 50px #111, inset 0 4px 5px rgba(255,255,255,0.3);
+    box-shadow: 0 5px 50px #111, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
+    animation: searching_anim 1s ease-out infinite alternate;
 }
 
 .up_signal img {
@@ -1170,7 +1167,6 @@ main {
 }
 .party_confirm_container {
     width:100%;
-    height: 20%;
     position:absolute;
     bottom:0;
     display: flex;
@@ -1178,7 +1174,7 @@ main {
     align-items: center;
 }
 .party_confirm_container img {
-    width:90%;
+    width:80%;
     cursor: pointer;
 }
 
@@ -1223,7 +1219,7 @@ main {
     }
 
     100% {
-        transform:translateY(-20px);
+        transform:translateY(-15px);
     }
 }
 
