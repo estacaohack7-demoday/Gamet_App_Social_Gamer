@@ -2,6 +2,7 @@
 
 body, html {
     width: 100%;
+    height: 90vh;
     margin:0;
     overflow: hidden;
     background: #EEE;
@@ -19,6 +20,11 @@ h1, h2, h3, h4, h5, h6, p, span {
     --default-gradient-color: slateblue;
     --unlike-press-anim-time:1s;
 }
+
+.desktop_container {
+    height: 100%;
+}
+
 .main_section {
     width: 100vw;
     height: 100%;
@@ -28,12 +34,12 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 main {
     width: 400vw;
-    height: 90vh;
+    height: 80vh;
     /* transition:0.2s ease; */
 }
 .great_background {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background: linear-gradient(0deg, #e39924, #dd5717);
     background: linear-gradient(0deg, #ff2b9f, #bf3464);
     background: linear-gradient(#00A348, #009C6A);
@@ -46,7 +52,8 @@ main {
 .top_menu {
     width: 100vw;
     height: 10vh;
-    position: relative;
+    position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -324,7 +331,7 @@ main {
 
 .name_bar {
     width: 100%;
-    height: 9%;
+    height: 10vh;
     background: rgba(255,255,255,0.15);
     display: flex;
     justify-content: space-evenly;
@@ -332,13 +339,13 @@ main {
     align-content: center;
     flex-direction: row;
     color: white;
+    line-height: 10vh;
 }
 .name_bar h1 {
     font-size: 6vh;
     font-weight: 400;
     margin: 0 6vw;
     height: 100%;
-    line-height: 8.5vh;
 }
 .name_bar p {
     font-size: 2.2vh;
@@ -414,17 +421,14 @@ main {
 }
 .compatibility {
     width: 75%;
-    height: 11vh;
+    height: 13vh;
     background: var(--default-black);
-    position: relative;
-    bottom: 1%;
     border-radius: 110px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
     position: absolute;
-    bottom: 34%;
+    bottom: 25%;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -481,6 +485,7 @@ main {
     position: absolute;
 }
 .bottom_info_container {
+    display: none;
     width: 80%;
     height: 100%;
 }
@@ -595,19 +600,16 @@ main {
     border-radius: var(--little-border-radius-like-unlike) 0 0 var(--big-border-radius-like-unlike);
 }
 
-.see_more {
+.see_more{
     position: absolute;
-}
-
-.see_less {
-    position:fixed;
-}
-
-.see_more, .see_less {
-    width: 10vh;
-    height: 10vh;
-    bottom: 16%;
-    right: 5%;
+    width: 8vh;
+    height: 8vh;
+    bottom: 18%;
+    right: 0;
+    left: 0;
+    background: #111;
+    margin: 0 auto;
+    z-index: 10;
     border-radius: 1000px;
     overflow: hidden;
     display: flex;
@@ -619,7 +621,7 @@ main {
     background-size: 120%;
     background-position: 55% 23%;
     cursor: pointer;
-    box-shadow: 0 0 60px 10px rgba(255,255,255,1);
+    box-shadow: 0 5px 50px #111, inset 0 4px 5px rgba(255,255,255,0.3);
 }
 
 .up_signal img {
