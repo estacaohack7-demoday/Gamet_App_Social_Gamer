@@ -168,7 +168,6 @@ main {
     width: 14vh;
     height: 14vh;
     border-radius: 200px;
-    background: rgba(255,255,255,0.5);
     overflow: hidden;
 
     display: flex;
