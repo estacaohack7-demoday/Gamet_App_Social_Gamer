@@ -198,19 +198,23 @@ unlikeButton.addEventListener('click', function() {
 // SEE PROFILE BUTTON
 
 let see_profile = document.querySelector('.see_more')
+let name_bar = document.querySelector('.name_bar')
+let profile_photo = document.querySelector('.image_container')
 let profile_window = document.querySelector('.hidden_profile')
 let voltar_playmatch = document.querySelector('.return')
 
-see_profile.addEventListener('click', function() {
-    profile_window.classList.add('show_hidden_profile')
-})
+see_profile.addEventListener('click', showHiddenProfile)
+name_bar.addEventListener('click', showHiddenProfile)
+profile_photo.addEventListener('click', showHiddenProfile)
 
 voltar_playmatch.addEventListener('click', function() {
     profile_window.classList.remove('show_hidden_profile')
 })
 
 
-
+function showHiddenProfile() {
+    profile_window.classList.add('show_hidden_profile')
+}
 
 
 

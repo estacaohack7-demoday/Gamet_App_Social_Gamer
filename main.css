@@ -207,7 +207,7 @@ main {
 .profile_name h2 {
     color:white;
     font-weight: 100;
-    font-size: 4.5vh;
+    font-size: 5vh;
 }
 
 .profile_name h3 {
@@ -340,7 +340,7 @@ main {
     height: 10vh;
     background: rgba(255,255,255,0.15);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     align-content: center;
     flex-direction: row;
@@ -349,11 +349,25 @@ main {
 .name_bar h1 {
     font-size: 9vw;
     font-weight: 400;
+    width: 56%;
+    text-align: center;
 }
 .name_bar p {
-    font-size: 3.6vw;
-    font-weight: 300;
+    font-size: 4vw;
+    font-weight: 400;
+    text-align: center;
 }
+
+.name_bar > div {
+    background: rgba(255,255,255,0.3);
+    width: 44%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .playmatch_middle {
     width: 45vh;
     height: 45vh;
@@ -622,7 +636,17 @@ main {
     background-position: 55% 23%;
     cursor: pointer;
     box-shadow: 0 5px 50px #111, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
-    animation: searching_anim 1s ease-out infinite alternate;
+    animation: searching_anim 0.7s ease-out infinite alternate, shadow_closer 0.7s ease-out infinite alternate;
+}
+
+@keyframes shadow_closer {
+    0% {
+        box-shadow: 0 5px 0 #111, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
+    }
+
+    100% {
+        box-shadow: 0 5px 50px #000, inset 0 4px 5px rgba(255,255,255,0.3), inset 0 -4px 10px #000;
+    }
 }
 
 .up_signal img {
@@ -1673,205 +1697,6 @@ main {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-@media (min-width: 1000px) {
-    .profile_photos_inner {
-        width: 32%;
-        height: 32vh;
-    }
-
-    .configure_menu > div {
-        width: 90%;
-        height: calc(8vh + 8vw);
-        cursor: pointer;
-        margin-bottom: 5vh;
-    }
-
-    .button_text h3 {
-        font-size: 4.5vw;
-    }
-
-    .button_text p {
-        font-size: 2.5vw;
-    }
-    
-    .name_bar h1 {
-        font-size: 7vh;
-    }
-
-    .name_bar {
-        height: 15%;
-    }
-
-    .name_bar p {
-        font-size: 3vh;
-    }
-
-    .top_menu {
-        width: 50vw;
-        right: 0;
-        left: 0;
-        margin: 0 auto;
-    }
-
-    .compatibility {
-        width: 42%;
-        height: 15vh;
-    }
-
-    .compat_level {
-        width: 12vh;
-        height: 100%;
-    }
-
-    .level_container {
-        width: 12vh;
-    }
-
-    .compatibility h2 {
-        line-height: calc(10vh - 2vw);
-        font-size: calc(3vw - 1.5vh);
-        margin-right: calc(4vw - 3vh);
-    }
-
-    .see_more {
-        right: 10%;
-        border-radius: 10px 10px 0 0;
-        width: 7%;
-    }
-
-    .bottom_info {
-        width: auto;
-        height: 28vh;
-        bottom: 50%;
-        position: absolute;
-        right: 0;
-        left: 71%;
-        transform: translateY(50%);
-    }
-
-    .party_configure {
-        margin: 13vh auto 3vh auto;
-        width: 50%;
-        background: none;
-    }
-
-    .party_confirm_container img {
-        width: auto;
-        height: 60%;
-    }
-
-    .party_configure div img {
-        width: 70%;
-    }
-
-    .party_users_above, .party_users_below {
-        height: 50%;
-    }
-
-    .party_users {
-        height: 55vh;
-    }
-
-    .msg_info p {
-        font-size: 3vw;
-        line-height: 4vw;
-    }
-
-    .msg_info h3 {
-        font-size: 2vw;
-    }
-
-    .message {
-        height: 23.6vh;
-    }
-
-    .msg_img_ctn {
-        width: 25%;
-        border: 0.5vw solid rgba(255,255,255,0.1);
-    }
-
-    .talks_window > article > div:after {
-        border: 1px solid rgba(255,255,255,0.25);
-    }
-
-    .msg_img_ctn div {
-        width: 19vh;
-        height: 19vh;
-    }
-
-    .side_right .msg_img_ctn div {
-        left: 3%;
-        box-shadow: 0 0 30px 5px rgba(0,0,0,0.3), 5px 0 0 0.3vw rgba(255,255,255,0.5);
-    }
-
-    .side_left .msg_img_ctn div {
-        right: 3%;
-        box-shadow: 0 0 30px 5px rgba(0,0,0,0.3), -5px 0 0 0.3vw rgba(255,255,255,0.5);
-    }
-
-    .friends_container article {
-        width: 27%;
-        height: 53vh;
-    }
-
-    .social_photo_container {
-        width: 26vh;
-        height: 26vh;
-        box-sizing: border-box;
-    }
-
-    .main_profile_photo {
-        width: 32vh;
-        height: 32vh;
-    }
-
-    .secondary_photos div {
-        width: 16vh;
-        height: 16vh;
-    }
-
-    .friends_container article h3 {
-        font-size: 2.5vw;
-    }
-
-    .see_more_conex {
-        font-size: 2vw;
-    }
-
-    .friends_container {
-        width: 61.8%;
-    }
-} */
 
 
 
