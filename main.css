@@ -144,7 +144,7 @@ main {
     align-items: flex-start;
     position: relative;
     z-index: 2;
-    box-shadow: 0 30px 80px #FFF;
+    box-shadow: 0 20px 140px #fff;
 }
 
 .main_profile_photo img, .secondary_photos div img, .party_user_profile img, .msg_img_ctn div img, .social_photo_container img, .image_container img {
